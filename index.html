@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="left">
+        <h1>
+          Mortgage Calculator
+        </h1>
+        <button class="clear-btn">
+          Clear All
+        </button>
+        <form>
+          <div class="field-container">
+            <label for="">Mortgage Amount</label>
+            <input type="number">
+          </div>
+          <div>
+            <div class="field-container">
+              <label for="">Mortgage Term</label>
+              <input type="number">
+            </div>
+            <div class="field-container">
+              <label for="">Interest Rate</label>
+              <input type="number">
+            </div>
+          </div>
+          <div>
+            <label class="radio-section-label"> Mortgage Type</label>
+            <div class="field-container">
+              <input type="radio" name="mortgageType">
+              <label for="">Repaymeny</label>
+            </div>
+            <div class="field-container">
+              <input type="radio" name="mortgageType">
+              <label for="">Interest Only</label>
+            </div>
+          </div>
+          <button class="calculate-btn">
+            <img src="./assets/images/icon-calculator.svg" alt="Calculator icon" >
+            Calculate Repayments
+          </button>
+        </form>
+      </div>
+      <div class="right">
+        <div class="empty-results">
+          <img src="./assets/images/illustration-empty.svg" alt="calculator image">
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click “calculate repayments” to see what
+            your monthly repayments would be.
+          </p>
+        </div>
+        <div class="completed-results">
+          <h2>Your results</h2>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate repayments” again.
+          </p>
+          <div class="results">
+            <h3>Your monthly repayments</h3>
+            <p class="monthly-repay">1,797.74</p>
+            <h3>Total you'll repay over the term</h3>
+            <p class="total-repay">539,322.94</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

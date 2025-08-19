@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*500 700*/
+:root {
+    --lime:hsl(61, 70%, 52%);
+    --red: hsl(4, 69%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --slate-100: hsl(202, 86%, 94%);
+    --slate-300: hsl(203, 41%, 72%);
+    --slate-500: hsl(200, 26%, 54%);
+    --slate-700: hsl(200, 24%, 40%);
+    --slate-900: hsl(202, 55%, 16%);
+    --slate-results: hsl(201.82,52.38%,12.35%);
+    --p-font-size: 16px;
+    --h1-font-size: 1.6em;
+    --label-font-size: 1.1em;
+    --margin-top-element: 5px;
+    --margin-top-section: 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla';
+}
+
+main section {
+    background-color: var(--white);
+}
+
+.left {
+    padding: 1.5em 1em;
+    background-color: var(--white);
+}
+
+.left h1 {
+    color: var(--slate-900);
+    font-weight: 700;
+    font-size: var(--h1-font-size);
+}
+
+.left .clear-btn {
+    background-color: transparent;
+    border: none;
+    margin-top: var(--margin-top);
+    color: var(--slate-700);
+    font-weight: 500;
+    font-size: var(--label-font-size);
+    border-bottom: 1px solid var(--slate-700);
+}
+
+.field-container {
+    margin-top: var(--margin-top-section);
+}
+
+.field-container input,
+.field-container:has(input[type="radio"]) {
+    width: 100%;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid var(--slate-700);
+    padding: .6em 1em;
+    margin-top: var(--margin-top-element);
+}
+
+.field-container input[type="number"] {
+ padding: 1em;   
+}
+
+.field-container label,
+.radio-section-label {
+   display: block;
+   color: var(--slate-700);
+   font-weight: 500;
+   font-size: var(--label-font-size);
+}
+.radio-section-label {
+    margin-top: var(--margin-top-section);
+}
+
+.field-container input[type="radio"] {
+    width: auto;
+}
+
+.field-container:has(input[type="radio"]) label {
+    display: inline;
+    color: var(--slate-900);
+    font-weight: 700;
+    margin-left: var(--margin-top-section);
+}
+
+.calculate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: var(--margin-top-section);
+    background-color: var(--lime);
+    width: 100%;
+    padding: 1em;
+    border-radius: 30px;
+    border: none;
+    color: var(--slate-900);
+    font-weight: 800;
+    font-size: var(--label-font-size);
+}
+
+.right {
+    padding: 1.5em 1em;
+    background-color: var(--slate-900);
+}
+
+.right .empty-results {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right .completed-results {
+    display: none;
+}
+
+.right .empty-results h2,
+.right .completed-results h2 {
+    margin-top: var(--margin-top-section);
+    color: var(--white);
+}
+
+.right .empty-results p,
+.right .completed-results p {
+    margin-top: var(--margin-top-section);
+    color: var(--slate-100);
+    font-weight: 500;
+}
+
+.results {
+    margin-top: var(--margin-top-section);
+    background-color: var(--slate-results);
+    padding: 1em;
+    border-radius: 8px;
+    border-top: 5px solid var(--lime);
+}
+
+.results h3 {
+    color: var(--slate-100);
+    font-weight: 500;
+}
+
+.results p.monthly-repay {
+    color: var(--lime);
+    font-size: 2.5em;
+    padding-bottom: var(--margin-top-element);
+    border-bottom: 1px solid var(--slate-100);
+    margin-bottom: var(--margin-top-section);
+}
+
+.results p.total-repay {
+    color: var(--white);
+    font-size: var(--h1-font-size);
+}
+
+
