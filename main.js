@@ -16,7 +16,7 @@ $form.addEventListener('submit', (e) => {
     let mortgageRate = $rateInput.value;
     let mortgageType = document.querySelector('input[name="mortgageType"]:checked').value;
     //calculate
-    let total = calculateMorgage(mortgageAmount, mortgageterm, mortgageRate, mortgageType);
+    let total = calculateMortgage(mortgageAmount, mortgageterm, mortgageRate, mortgageType);
     //show results
     console.log(total);
     
@@ -24,7 +24,7 @@ $form.addEventListener('submit', (e) => {
 
 function calculateMortgage(amount, term, rate, type) {
     let amountPerMonth = 0;
-    let ratePerMoth = rate / 12;
+    let ratePerMoth = (rate/100) / 12;
     let totalTerms = term * 12;
     if (type == "repayment") {
         amountPerMonth = amount * ((ratePerMoth * ( 1 + ratePerMoth)**totalTerms)/(( 1+ ratePerMoth)**totalTerms - 1));
