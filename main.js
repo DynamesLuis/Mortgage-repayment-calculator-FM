@@ -16,23 +16,33 @@ $form.addEventListener('submit', (e) => {
     let mortgageRate = $rateInput.value;
     let mortgageType = document.querySelector('input[name="mortgageType"]:checked').value;
     //calculate
-    let total = calculateMortgage(mortgageAmount, mortgageterm, mortgageRate, mortgageType);
+    let [amountPerMonth, total] = calculateMortgage(mortgageAmount, mortgageterm, mortgageRate, mortgageType);
     //show results
-    console.log(total);
+    showResults(amountPerMonth, total);
+    console.log(amountPerMonth);
     
 })
 
 function calculateMortgage(amount, term, rate, type) {
     let amountPerMonth = 0;
+    let totalAmount = 0;
     let ratePerMoth = (rate/100) / 12;
     let totalTerms = term * 12;
     if (type == "repayment") {
         amountPerMonth = amount * ((ratePerMoth * ( 1 + ratePerMoth)**totalTerms)/(( 1+ ratePerMoth)**totalTerms - 1));
+        totalAmount = amountPerMonth * totalTerms;
+        amountPerMonth = amountPerMonth .toFixed(2);
+        totalAmount = totalAmount .toFixed(2);
     } else {
         
     }
 
-    return amountPerMonth;
+    return [amountPerMonth, totalAmount];
 }
-//M=P⋅(1+r)n−1r(1+r)n​
+function showResults(amountPerMonth, total) {
+    $emptyResultsContainer.style.display = "none";
+    $monthlyRepayParagraph = $completedResultsContainer.querySelector(".monthly-repay").innerText = amountPerMonth;
+    $totalRepayParagraph = $completedResultsContainer.querySelector(".total-repay").innerText = total;
+    $completedResultsContainer.style.display = "block";
+}
 
