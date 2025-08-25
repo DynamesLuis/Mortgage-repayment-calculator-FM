@@ -23,31 +23,35 @@
         <form class="form">
           <div class="field-container">
             <label for="">Mortgage Amount</label>
-            <input type="number" id="mortgageAmount" class="l" required>
+            <input type="number" id="mortgageAmount" class="l" >
             <span class="input-icon">£</span>
+            <span class="required-msg">The field is required</span>
           </div>
           <div>
             <div class="field-container">
               <label for="">Mortgage Term</label>
-              <input type="number" id="mortgageTerm" required>
+              <input type="number" id="mortgageTerm" >
               <span class="input-icon l">years</span>
+              <span class="required-msg">The field is required</span>
             </div>
             <div class="field-container">
               <label for="">Interest Rate</label>
-              <input type="number" id="interestRate" step="0.01" required>
+              <input type="number" id="interestRate" step="0.01" >
               <span class="input-icon l">%</span>
+              <span class="required-msg">The field is required</span>
             </div>
           </div>
           <div>
             <label class="radio-section-label"> Mortgage Type</label>
             <div class="field-container">
-              <input type="radio" name="mortgageType" checked value="repayment">
+              <input type="radio" name="mortgageType" value="repayment">
               <label for="">Repaymeny</label>
             </div>
             <div class="field-container">
               <input type="radio" name="mortgageType" value="interest">
               <label for="">Interest Only</label>
             </div>
+            <span class="required-msg radio-msg">The field is required</span>
           </div>
           <button class="calculate-btn" type="submit">
             <img src="./assets/images/icon-calculator.svg" alt="Calculator icon">

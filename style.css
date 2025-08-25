@@ -149,6 +149,30 @@ input[type='radio']:checked {
     margin-left: var(--margin-top-section);
 }
 
+.required-msg {
+    opacity: 0;
+}
+
+.required-msg.show {
+    opacity: 1;
+}
+
+input.empty {
+    border: 1px solid var(--red);
+}
+
+input.empty + span {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+input.empty ~ .required-msg,
+.required-msg.show  {
+    color: var(--red);
+    background-color: transparent;
+    opacity: 1;
+}
+
 .calculate-btn {
     display: flex;
     justify-content: center;
