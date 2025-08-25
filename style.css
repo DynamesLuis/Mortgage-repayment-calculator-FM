@@ -48,6 +48,9 @@ main section {
     font-weight: 500;
     font-size: var(--label-font-size);
     border-bottom: 1px solid var(--slate-700);
+     &:hover {
+        cursor: pointer;
+    }
 }
 
 .field-container {
@@ -63,6 +66,11 @@ main section {
     border: 1px solid var(--slate-700);
     padding: .6em 1em;
     margin-top: var(--margin-top-element);
+
+    &:hover {
+        border-color: var(--slate-900);
+        cursor: pointer;
+    }
 
     &:focus {
         border-color: var(--lime);
@@ -155,6 +163,10 @@ input[type='radio']:checked {
     color: var(--slate-900);
     font-weight: 800;
     font-size: var(--label-font-size);
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }
 
 .right {
