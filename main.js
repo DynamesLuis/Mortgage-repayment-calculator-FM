@@ -38,7 +38,10 @@ function calculateMortgage(amount, term, rate, type) {
         amountPerMonth = amountPerMonth .toFixed(2);
         totalAmount = totalAmount .toFixed(2);
     } else {
-        
+        amountPerMonth = amount * ratePerMoth;
+        totalAmount = amountPerMonth * totalTerms;
+        amountPerMonth = amountPerMonth .toFixed(2);
+        totalAmount = totalAmount .toFixed(2);
     }
 
     return [amountPerMonth, totalAmount];
@@ -46,8 +49,8 @@ function calculateMortgage(amount, term, rate, type) {
 
 function showResults(amountPerMonth, total) {
     $emptyResultsContainer.style.display = "none";
-    $monthlyRepayParagraph = $completedResultsContainer.querySelector(".monthly-repay").innerText = amountPerMonth;
-    $totalRepayParagraph = $completedResultsContainer.querySelector(".total-repay").innerText = total;
+    $monthlyRepayParagraph = $completedResultsContainer.querySelector(".monthly-repay").innerText = "£" + amountPerMonth;
+    $totalRepayParagraph = $completedResultsContainer.querySelector(".total-repay").innerText = "£" + total;
     $completedResultsContainer.style.display = "block";
 }
 
