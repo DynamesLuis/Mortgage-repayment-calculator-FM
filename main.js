@@ -14,7 +14,7 @@ $form.addEventListener('submit', (e) => {
     e.preventDefault();
     let someSelected = Array.from($radioInputs).some(radio => radio.checked);
     checkIsEmpty(someSelected);
-    if (!someSelected) return;
+    if (isSomeInputEmpty) return;
 
     let mortgageAmount = $amountInput.value;
     let mortgageterm = $termInput.value;
@@ -69,6 +69,9 @@ function clearAll() {
     $amountInput.value = '';
     $termInput.value = '';
     $rateInput.value = '';
+    $radioInputs.forEach((input) =>{
+        input.checked = false;
+    })
 }
 
 function checkIsEmpty(someSelected) {
