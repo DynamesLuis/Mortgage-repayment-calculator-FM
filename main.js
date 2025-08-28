@@ -69,7 +69,7 @@ function clearAll() {
     $amountInput.value = '';
     $termInput.value = '';
     $rateInput.value = '';
-    $radioInputs.forEach((input) =>{
+    $radioInputs.forEach((input) => {
         input.checked = false;
     })
 }

@@ -23,6 +23,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Karla';
+    transition: all .2s ease;
 }
 
 main section {
@@ -84,7 +85,7 @@ main section {
 
 .field-container:has(input[type="radio"]:checked) {
     border-color: var(--lime);
-     &:hover {
+    &:hover {
         cursor: default;
     }
 }
